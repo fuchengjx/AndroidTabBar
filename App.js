@@ -28,7 +28,7 @@ import Setting from './Android_views/Setting'
   constructor() {
     super();
     this.state = {
-      selectedTab: 'Setting',
+      selectedTab: 'Home',
     }
   }
   render() {
@@ -65,6 +65,7 @@ import Setting from './Android_views/Setting'
         {this._renderView()} 
         </TabNavigatorItem>
       </TabNavigator>
+
       </View>
      
     )
@@ -80,7 +81,7 @@ import Setting from './Android_views/Setting'
         view = <Setting></Setting>
         break;
       default:
-        view = <Setting></Setting>;
+        view = <Home></Home>;
         break;
     }
     return view;
