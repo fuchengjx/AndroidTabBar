@@ -23,7 +23,6 @@ const TAB_PRESS_3=require('./images/tabbar_3_press.png');
 
 import Home from './Android_views/Home'
 import Setting from './Android_views/Setting'
-import ToiletPage from './Android_views/toiletPage'
 
  export default class App extends Component {
   constructor() {
@@ -34,16 +33,14 @@ import ToiletPage from './Android_views/toiletPage'
   }
   render() {
     return (
-      <View style={styles.container}>
-       <TabNavigator>
+      <TabNavigator>
         <TabNavigatorItem
         title="首页"
         selected={this.state.selectedTab==='Home'}
         renderIcon={() => <Image style={styles.tabIcon} source={TAB_NORMAL_1} />}
-        renderSelectedIcon={() => <Image style={styles.tabIcon} source={TAB_PRESS_1} />}
+        renderSelectedIcon={() => <Image source={TAB_PRESS_1} style={styles.tabIcon}/>}
         selectedTitleStyle={{color:'#f85959'}}
         onPress={()=> {
-          console.log("i am Home")
           this.setState({
             selectedTab: 'Home'
           });
@@ -51,29 +48,13 @@ import ToiletPage from './Android_views/toiletPage'
         >
         {this._renderView()}
         </TabNavigatorItem>
-
         <TabNavigatorItem
-         title="厕所"
-         selected={this.state.selectedTab === 'toiletPage'}
-         renderIcon={() => <Image source={TAB_NORMAL_2} style={styles.tabIcon}/>}
-         renderSelectedIcon={() => <Image source={TAB_PRESS_2} style={styles.tabIcon}/>}
-         selectedTitleStyle={{color:'#f85959'}}
-         onPress={()=>{
-          this.setState({
-            selectedTab: 'toiletPage'
-          })
-        }}
-        >
-        {this._renderView()} 
-        </TabNavigatorItem>
-
-        <TabNavigatorItem
-         title="设置"
-         selected={this.state.selectedTab === 'Setting'}
-         renderIcon={() => <Image source={TAB_NORMAL_3} style={styles.tabIcon}/>}
-         renderSelectedIcon={() => <Image source={TAB_PRESS_3} style={styles.tabIcon}/>}
-         selectedTitleStyle={{color:'#f85959'}}
-         onPress={()=>{
+        title="设置"
+        selected={this.state.selectedTab === 'Setting'}
+        renderIcon={() => <Image source={TAB_NORMAL_2} style={styles.tabIcon}/>}
+        renderSelectedIcon={() => <Image source={TAB_PRESS_2} style={styles.tabIcon}/>}
+        selectedTitleStyle={{color:'#f85959'}}
+        onPress={()=>{
           this.setState({
             selectedTab: 'Setting'
           })
@@ -82,42 +63,27 @@ import ToiletPage from './Android_views/toiletPage'
         {this._renderView()} 
         </TabNavigatorItem>
       </TabNavigator>
-
-      </View>
-     
     )
   }
   _renderView() {
     var view = null;
-    console.log("state", this.state.selectedTab)
     switch(this.state.selectedTab) {
       case 'Home':
-        view = <Home></Home>
-        break;
-      case 'toiletPage':
-        view = <ToiletPage></ToiletPage>
+        view = <Home></Home>;
         break;
       case 'Setting':
         view = <Setting></Setting>
         break;
       default:
         view = <Home></Home>;
-        break;
     }
-    return view;
+    return view
   }
-
-
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5fcff'
-  },
-  tab:{
-    height: 52,
-    alignItems:'center',
-    backgroundColor:'#f4f5f6',
   },
   tabIcon:{
     width: 25,
