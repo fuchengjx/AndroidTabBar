@@ -14,3 +14,4 @@
 
 3. import 引入组件 组件名必须为大写 否则使用自定义组件的时候无法使用
 
+4. react Native里的css样式不能从父组件继承给子组件。 例如父组件View的css样式为color: 'red'， 子组件Text不会继承到任何css样式。
