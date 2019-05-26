@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>附近</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> 
+  <style type="text/css">
+    html,body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<script type ="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=31a92f9f52bdc2e57295789a563ad113"></script> 
+<body>
+    <div id="container"></div>
+
+<script>
+  var map = new AMap.Map('container', {
+    zoom: 15,
+    center: [116.39, 39.9]
+  })
+  //   window.onLoad  = function(){
+  //       var map = new AMap.Map('container');
+  // }
+  // var url = 'https://webapi.amap.com/maps?v=1.4.14&key=31a92f9f52bdc2e57295789a563ad113';
+  // var jsapi = doc.createElement('script');
+  // jsapi.charset = 'utf-8';
+  // jsapi.src = url;
+  // document.head.appendChild(jsapi);
+</script>
+</body>
+</html>  

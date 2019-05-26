@@ -7,7 +7,7 @@ class toiletPage extends Component{
   constructor(props) {
     super(props);
       this.state = {
-        url: 'https://www.baidu.com',
+        url: 'file:///C:/Users/32761/Desktop/A2/html/nearby.html',
         isError: false,
         content: 'i am toiletPage'
       }
