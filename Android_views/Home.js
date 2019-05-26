@@ -44,13 +44,14 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: 300,
+    height: 600,
     textAlign: 'center'
   },
   header: {
     flex: 1,
-    backgroundColor: 'red'
-
+    backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   content: {
     flex: 1,
@@ -60,7 +61,9 @@ const styles = StyleSheet.create({
   },
   center: {
     flex: 2,
-    backgroundColor: 'yellow'
+    backgroundColor: 'yellow',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   left: {
     flex: 1,
@@ -73,7 +76,8 @@ const styles = StyleSheet.create({
   footer: {
     flex: 1,
     backgroundColor: 'pink',
-
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 })
 // AppRegistry.registerComponent('Home', () => Home);

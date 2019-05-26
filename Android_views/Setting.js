@@ -16,11 +16,22 @@ class Setting extends Component {
   }
   render() {
     return (
-      <View>
-        <Text>{this.state.content}</Text>
+      <View style={styles.container}>
+        <Text style={styles.font}>{this.state.content}</Text>
       </View>
     )
   }
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  font: {
+    fontSize: 30,
+    color: 'green'
+  }
+})
 // AppRegistry.registerComponent('Setting', () => Setting);
 module.exports = Setting;

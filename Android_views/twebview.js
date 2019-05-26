@@ -37,8 +37,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
   errorInfo: {
-    marginTop: 100,
+    //充满整个屏幕
+    flex: 1, 
+    //垂直居中
     justifyContent: 'center',
+    //水平居中
     alignItems: 'center',
   },
   font: {
