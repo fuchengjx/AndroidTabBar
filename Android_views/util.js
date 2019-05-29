@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions, PixelRatio } from 'react-native';
 
+//封装的工具类
 // fetch
 // 获取屏幕的宽高
 // 获去最小线宽
-
 
 module.exports = {
   size: {
